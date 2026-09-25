@@ -64,7 +64,7 @@
   <div style="left: 454px; top: 508px; position: absolute; color: white; font-size: 14px; font-family: Inter; font-weight: 700; word-wrap: break-word">Launch Simulated Stream</div>
 </div>
 <style>
-/* 1. Reset the screen boundaries and hide the scrollbar */
+<style>
 html, body {
   margin: 0;
   padding: 0;
@@ -74,9 +74,9 @@ html, body {
   background-color: #111124; 
 }
 
-/* 2. Pull the absolute layout container up out from behind the taskbar */
+/* This shrinks and centers the layout so nothing gets cut off */
 body > div {
-  position: relative;
-  transform: translateY(-40px); 
+  transform: scale(0.92); /* Shrinks the layout to 92% size */
+  transform-origin: top center; /* Keeps the top header anchored properly */
 }
 </style>
