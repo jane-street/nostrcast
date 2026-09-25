@@ -1,3 +1,4 @@
+<div id="app-canvas" style="width: 1920px; height: 1080px; position: relative; background: #121212; overflow: hidden">
 <div style="width: 1920px; height: 1080px; position: relative; background: #121212; overflow: hidden">
   <div style="width: 1440px; height: 320px; left: 16px; top: 744px; position: absolute; background: #1A1A1A"></div>
   <div style="width: 1440px; height: 720px; left: 16px; top: 76px; position: absolute; background: #1A1A1A"></div>
@@ -64,19 +65,23 @@
   <div style="left: 454px; top: 508px; position: absolute; color: white; font-size: 14px; font-family: Inter; font-weight: 700; word-wrap: break-word">Launch Simulated Stream</div>
 </div>
 <style>
-<style>
+/* Make the background fill the true window space */
 html, body {
   margin: 0;
   padding: 0;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  background-color: #111124; 
+  background-color: #121212; 
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 
-/* This shrinks and centers the layout so nothing gets cut off */
-body > div {
-  transform: scale(0.92); /* Shrinks the layout to 92% size */
-  transform-origin: top center; /* Keeps the top header anchored properly */
+/* Dynamically auto-scale the 1920x1080 Figma canvas to fit the browser viewport width */
+#app-canvas {
+  transform: scale(calc(100vw / 1920));
+  transform-origin: top center;
+  flex-shrink: 0;
 }
 </style>
