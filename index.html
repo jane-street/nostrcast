@@ -63,44 +63,20 @@
   <div style="width: 240px; height: 44px; left: 420px; top: 496px; position: absolute; background: #6366F1; border-radius: 8px"></div>
   <div style="left: 454px; top: 508px; position: absolute; color: white; font-size: 14px; font-family: Inter; font-weight: 700; word-wrap: break-word">Launch Simulated Stream</div>
 </div>
-<!-- 1. Wrap everything inside the main-wrapper class -->
-<div class="main-wrapper">
-
-  <!-- 2. This is your main layout area -->
-  <div class="content-body">
-    
-    <!-- Paste all your existing <div> tags (lines 55 to 65) inside here -->
-    <div style="width: 96px; height: 24px; ..."></div>
-    <div style="left: 48px; top: 34px; ...">NostrCast</div>
-    <!-- ... all your other current lines ... -->
-    
-  </div>
-  
-</div>
-
-<!-- Keep your CSS styles at the bottom exactly where you put them -->
 <style>
-.main-wrapper {
-  display: flex;
-  flex-direction: column;
-  height: 100vh; 
-  overflow: hidden; 
-  position: relative; /* Make sure to add this so your absolute positions stay inside the box */
-}
-
-.content-body {
-  flex: 1;
-  display: flex;
-  overflow: hidden; 
-}
-</style>
-<style>
-/* Target the actual body of the page directly */
-body, html {
+/* 1. Reset the screen boundaries and hide the scrollbar */
+html, body {
   margin: 0;
   padding: 0;
   width: 100vw;
   height: 100vh;
-  overflow: hidden; /* This completely deletes the scrollbar */
+  overflow: hidden;
+  background-color: #111124; 
+}
+
+/* 2. Pull the absolute layout container up out from behind the taskbar */
+body > div {
+  position: relative;
+  transform: translateY(-40px); 
 }
 </style>
