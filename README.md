@@ -1,4 +1,5 @@
-# 🚀 NostrCast | Decentralized Federated Live Streaming Arena### *A Sovereign Protocol Layer over PeerTube powered by Nostr & Cashu***2026 Boss Battle Hackathon Submission**
+# 🚀 NostrCast | Decentralized Federated Live Streaming Arena
+### *A Sovereign Protocol Layer over PeerTube powered by Nostr & Cashu***2026 Boss Battle Hackathon Submission**
 
 [![Framework: Next.js](https://img.shields.io/badge/Framework-Next.js%2015-black?style=flat-squared&logo=nextdotjs)](https://nextjs.org)
 [![Language: TypeScript](https://img.shields.io/badge/Language-TypeScript-blue?style=flat-squared&logo=typescript)](https://www.typescriptlang.org)
