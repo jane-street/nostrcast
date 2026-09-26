@@ -37,7 +37,30 @@ NostrCast integrates specialized, production-ready open-source protocols to guar
 
 NostrCast operates on a **two-screen architecture** optimized for low-latency feedback loops. Both components utilize an identical underlying state machine synchronized by public relay events and local WebSocket pipelines.
 
-┌──────────────────────┐│     Livepeer SDK     ││  (Decentralized Video)│└──────────┬───────────┘│▼┌────────────────────────────────────────────────────────┐│                   Nostr Relays (NDK)                   │└───────────┬────────────────────────────────┬───────────┘│                                │▼                                ▼┌───────────────────────┐        ┌───────────────────────┐│   Layout A: Viewer    │        │  Layout B: Streamer   │├───────────────────────┤        ├───────────────────────┤│ • Video Window        │        │ • Outbound Feed Grid  ││ • Interactive Hot Grid│        │ • Event Canvas Overlay││ • Public Relay Chat   │        │ • WebSocket Pulse     │└───────────┬───────────┘        └───────────▲───────────┘│                                ││  NIP-61 NutZap                 │ Verified Trigger└────────────────────────────────┘ (via Local WS)
+```text
+                  ┌──────────────────────┐
+                  │     Livepeer SDK     │
+                  │  (Decentralized Video)│
+                  └──────────┬───────────┘
+                             │
+                             ▼
+ ┌────────────────────────────────────────────────────────┐
+ │                   Nostr Relays (NDK)                   │
+ └───────────┬────────────────────────────────┬───────────┘
+             │                                │
+             ▼                                ▼
+ ┌───────────────────────┐        ┌───────────────────────┐
+ │   Layout A: Viewer    │        │  Layout B: Streamer   │
+ ├───────────────────────┤        ├───────────────────────┤
+ │ • Video Window        │        │ • Outbound Feed Grid  │
+ │ • Interactive Hot Grid│        │ • Event Canvas Overlay│
+ │ • Public Relay Chat   │        │ • WebSocket Pulse     │
+ └───────────┬───────────┘        └───────────▲───────────┘
+             │                                │
+             │  NIP-61 NutZap                 │ Verified Trigger
+             └────────────────────────────────┘ (via Local WS)
+```
+
 ### Layout A: The Viewer's Arena
 Designed for a lightweight, immersive viewing experience:
 * **Video Window:** Houses the custom `<Player />` component decoding live HLS/WebRTC segments from the decentralized media mesh.
